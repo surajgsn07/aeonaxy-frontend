@@ -21,7 +21,7 @@ const Signup = () => {
         return;
       }
       
-    const response = await axios.post("https://aenaxy-backend-1.onrender.com/v1/user/checkUsername" ,{
+    const response = await axios.post("https://aenaxy-backend-1.onrender.com/api/v1/user/checkUsername" ,{
       username:value
     });
 
