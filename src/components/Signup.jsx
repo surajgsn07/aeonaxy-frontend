@@ -67,6 +67,7 @@ const Signup = () => {
         const cookie = new Cookies();
         
         cookie.set('accessToken', response.data.data.accessToken, {path: '/', expires: new Date(Date.now()+2592000)});
+        localStorage.setItem("accessToken" , response.data.data.accessToken)
         console.log(response)
         navigate('/createProfile')
       }
