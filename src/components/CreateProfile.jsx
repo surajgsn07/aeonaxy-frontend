@@ -12,17 +12,18 @@ const CreateProfile = () => {
   const changeAvatar = async () => {
     try {
       
+      const accessToken = localStorage.getItem("accessToken");
     const formData = new FormData();
     formData.append("avatar", selectedFile);
+    formData.append("accessToken", accessToken);
     console.log(formData)
-    const accessToken = localStorage.getItem("accessToken");
     
   console.log(accessToken)
 
 
     const response = await axios.post(
       "https://aenaxy-backend-1.onrender.com/api/v1/user/setAvatar",
-      {...formData , accessToken},
+      formData,
       {
         withCredentials: true,
         headers: {
@@ -50,7 +51,8 @@ const CreateProfile = () => {
       formData.append("location" , location1);
       console.log(formData)
       const data = {
-        location
+        location,
+        accessToken
       }
 
       const accessToken = localStorage.getItem("accessToken")
@@ -60,7 +62,7 @@ const CreateProfile = () => {
       
       const response = await axios.post(
         "https://aenaxy-backend-1.onrender.com/api/v1/user/setLocation",
-        {...data , accessToken},
+        data,
         {
           withCredentials: true,
         }
