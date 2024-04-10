@@ -16,6 +16,9 @@ const CreateProfile = () => {
     formData.append("avatar", selectedFile);
     console.log(formData)
     const accessToken = localStorage.getItem("accessToken");
+    
+  console.log(accessToken)
+
 
     const response = await axios.post(
       "https://aenaxy-backend-1.onrender.com/api/v1/user/setAvatar",
@@ -51,6 +54,9 @@ const CreateProfile = () => {
       }
 
       const accessToken = localStorage.getItem("accessToken")
+      
+  console.log(accessToken)
+
       
       const response = await axios.post(
         "https://aenaxy-backend-1.onrender.com/api/v1/user/setLocation",
