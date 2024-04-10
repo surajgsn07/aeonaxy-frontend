@@ -17,7 +17,7 @@ const CreateProfile = () => {
     console.log(formData)
 
     const response = await axios.post(
-      "http://localhost:8000/api/v1/user/setAvatar",
+      "https://aenaxy-backend-1.onrender.com/api/v1/user/setAvatar",
       formData,
       {
         withCredentials: true,
@@ -50,7 +50,7 @@ const CreateProfile = () => {
       }
       
       const response = await axios.post(
-        "http://localhost:8000/api/v1/user/setLocation",
+        "https://aenaxy-backend-1.onrender.com/api/v1/user/setLocation",
         data,
         {
           withCredentials: true,
