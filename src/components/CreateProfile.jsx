@@ -33,7 +33,7 @@ const CreateProfile = () => {
 
     const response = await axios.post(
       "https://aenaxy-backend.onrender.com/api/v1/user/setAvatar",
-      data,
+      formData,
       {
         withCredentials: true,
         headers: {
