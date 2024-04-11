@@ -25,7 +25,7 @@ const CreateProfile = () => {
     }
     }
     
-  console.log(accessToken)
+  console.log(data)
 
 
     const response = await axios.post(
@@ -57,17 +57,18 @@ const CreateProfile = () => {
     console.log(location1)
       formData.append("location" , location1);
       console.log(formData)
-      const data = {
-        location,
-        
-        headers:{
-          Authorization:`Bearer ${accessToken}`
-      }
-      }
+      
 
       const accessToken = localStorage.getItem("accessToken")
       
   console.log(accessToken)
+  const data = {
+    location,
+    
+    headers:{
+      Authorization:`Bearer ${accessToken}`
+  }
+  }
 
       
       const response = await axios.post(
