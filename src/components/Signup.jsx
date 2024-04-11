@@ -21,7 +21,7 @@ const Signup = () => {
         return;
       }
       
-    const response = await axios.post("https://aenaxy-backend.vercel.app/api/v1/user/checkUsername" ,{
+    const response = await axios.post("https://aenaxy-backend.onrender.com/api/v1/user/checkUsername" ,{
       username:value
     });
 
