@@ -21,7 +21,7 @@ const Signup = () => {
         return;
       }
       
-    const response = await axios.post("https://aenaxy-backend-1.onrender.com/api/v1/user/checkUsername" ,{
+    const response = await axios.post("https://aenaxy-backend.onrender.com/api/v1/user/checkUsername" ,{
       username:value
     });
 
@@ -62,7 +62,7 @@ const Signup = () => {
       password
     }
     try {
-      const response = await axios.post("https://aenaxy-backend-1.onrender.com/api/v1/user/register" , data);
+      const response = await axios.post("https://aenaxy-backend.onrender.com/api/v1/user/register" , data);
       if(response){
         const cookie = new Cookies();
         

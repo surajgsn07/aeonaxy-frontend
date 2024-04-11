@@ -29,7 +29,7 @@ const CreateProfile = () => {
 
 
     const response = await axios.post(
-      "https://aenaxy-backend-1.onrender.com/api/v1/user/setAvatar",
+      "https://aenaxy-backend.onrender.com/api/v1/user/setAvatar",
       data,
       {
         withCredentials: true,
@@ -71,7 +71,7 @@ const CreateProfile = () => {
 
       
       const response = await axios.post(
-        "https://aenaxy-backend-1.onrender.com/api/v1/user/setLocation",
+        "hhttps://aenaxy-backend.onrender.com/api/v1/user/setLocation",
         data,
         {
           withCredentials: true,

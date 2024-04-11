@@ -33,13 +33,13 @@ const Select = () => {
     }
     }
     try {
-      const response = await axios.post("https://aenaxy-backend-1.onrender.com/v1/user/setPurpose" ,data,{
+      const response = await axios.post("https://aenaxy-backend.onrender.com/api/v1/user/setPurpose" ,data,{
         withCredentials:true
       });
       console.log(response)
       if(response){
         try {
-          const response = await axios.post("https://aenaxy-backend-1.onrender.com/api/v1/user/sendEmail" ,data,{
+          const response = await axios.post("https://aenaxy-backend.onrender.com/api/v1/user/sendEmail" ,data,{
             withCredentials:true
           });
           if(response){
