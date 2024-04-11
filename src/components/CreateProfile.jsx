@@ -15,8 +15,11 @@ const CreateProfile = () => {
       const accessToken = localStorage.getItem("accessToken");
     const formData = new FormData();
     formData.append("avatar", selectedFile);
-    formData.append("accessToken", accessToken);
+    formData.append("headers", accessToken);
+    formData.set("Authorization", `Bearer ${accessToken}`);
     console.log(formData)
+
+
     const data = {
       avatar:selectedFile,
       
