@@ -27,7 +27,10 @@ const Select = () => {
 
     const data = {
       purpose,
-      accessToken
+      
+      headers:{
+        Authorization:`Bearer ${accessToken}`
+    }
     }
     try {
       const response = await axios.post("https://aenaxy-backend-1.onrender.com/v1/user/setPurpose" ,data,{

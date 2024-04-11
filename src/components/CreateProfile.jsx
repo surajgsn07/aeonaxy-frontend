@@ -19,7 +19,10 @@ const CreateProfile = () => {
     console.log(formData)
     const data = {
       avatar:selectedFile,
-      accessToken
+      
+      headers:{
+        Authorization:`Bearer ${accessToken}`
+    }
     }
     
   console.log(accessToken)
@@ -56,7 +59,10 @@ const CreateProfile = () => {
       console.log(formData)
       const data = {
         location,
-        accessToken
+        
+        headers:{
+          Authorization:`Bearer ${accessToken}`
+      }
       }
 
       const accessToken = localStorage.getItem("accessToken")
