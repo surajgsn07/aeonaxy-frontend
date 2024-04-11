@@ -17,13 +17,17 @@ const CreateProfile = () => {
     formData.append("avatar", selectedFile);
     formData.append("accessToken", accessToken);
     console.log(formData)
+    const data = {
+      avatar:selectedFile,
+      accessToken
+    }
     
   console.log(accessToken)
 
 
     const response = await axios.post(
       "https://aenaxy-backend-1.onrender.com/api/v1/user/setAvatar",
-      formData,
+      data,
       {
         withCredentials: true,
         headers: {
